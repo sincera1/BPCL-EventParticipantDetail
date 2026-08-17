@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.2",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "bpcl-event-participant-detail",
+    "libraryId": "53020263-268a-4d88-9d49-4cf41f028efc",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "BPCL-EventParticipantDetail",
+    "solutionShortDescription": "BPCL-EventParticipantDetail description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

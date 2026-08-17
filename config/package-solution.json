@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "bpcl-event-participant-detail-client-side-solution",
+    "id": "53020263-268a-4d88-9d49-4cf41f028efc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "BPCL-EventParticipantDetail description"
+      },
+      "longDescription": {
+        "default": "BPCL-EventParticipantDetail description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "bpcl-event-participant-detail Feature",
+        "description": "The feature that activates elements of the bpcl-event-participant-detail solution.",
+        "id": "11a71cb4-77f7-4a5b-b023-ce92076c6c8b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/bpcl-event-participant-detail.sppkg"
+  }
+}

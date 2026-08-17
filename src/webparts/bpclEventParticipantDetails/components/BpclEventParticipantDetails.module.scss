@@ -1,0 +1,1220 @@
+:global(#workbenchPageContent),
+:global(.CanvasZone),
+:global(.ControlZone),
+:global(.CanvasSection),
+:global(.Canvas),
+:global(.CanvasZoneSectionContainer) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f4f8fb !important;
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.commonSectionstyle {
+  // padding: 20px;
+  background: #f4f8fb;
+}
+
+/* ---------------- Banner ---------------- */
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+/* Left Side */
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.backBtn {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  background: #ffffff29;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  i {
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+.bannerContent {
+  color: #fff;
+  min-width: 0;
+
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.divider {
+  margin: 0 8px;
+}
+
+/* =========================================================
+   Right Side - Stats
+   ========================================================= */
+
+.statsWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.stageCard {
+  min-width: 100px;
+  min-height: 62px;
+  background: #1a1a1a42;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stageLabel {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.stageValue {
+  // display: flex;
+  // align-items: center;
+
+  // gap: 5px;
+  // font-weight: 700;
+  // font-size: 16px;
+  // line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 11px;
+
+  i {
+    color: #8bffad;
+    font-size: 16px;
+  }
+
+  strong {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.mailButton {
+  min-width: 100px;
+  min-height: 62px;
+  padding: 8px 12px;
+  border: 2px solid #0247aa;
+  border-radius: 10px;
+  background: #fff;
+  color: #0247aa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #f1f7ff;
+  }
+}
+
+.mailIcon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .bannerOverlay {
+    padding: 0 22px;
+  }
+
+  .bannerContent {
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .backBtn {
+    margin-right: 14px;
+  }
+
+  .statsWrapper {
+    gap: 7px;
+  }
+
+  .stageCard {
+    min-width: 85px;
+    padding: 7px 8px;
+  }
+
+  .mailButton {
+    min-width: 70px;
+    padding: 7px 8px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bannerContainer {
+    margin-bottom: 0;
+  }
+
+  .bannerImage {
+    height: 220px;
+  }
+
+  .bannerOverlay {
+    position: relative;
+    inset: auto;
+    min-height: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .bannerContainer {
+    height: 220px;
+  }
+
+  .bannerImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .bannerOverlay {
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .bannerLeft {
+    width: 100%;
+  }
+
+  .bannerContent {
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+  }
+
+  .statsWrapper {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  .stageCard,
+  .mailButton {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   Small Mobile
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+  .bannerContainer {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .bannerImage {
+    height: 100%;
+    min-height: 260px;
+  }
+
+  .bannerOverlay {
+    min-height: 260px;
+    padding: 20px;
+  }
+
+  .backBtn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    margin-right: 12px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  .bannerContent {
+    h1 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+  }
+
+  .divider {
+    margin: 0 5px;
+  }
+
+  .statsWrapper {
+    flex-wrap: wrap;
+  }
+
+  .stageCard {
+    min-height: 60px;
+    min-width: 0;
+    padding: 8px;
+    border-radius: 9px;
+  }
+
+  .stageLabel {
+    font-size: 8px;
+  }
+
+  .stageValue {
+    font-size: 10px;
+
+    strong {
+      font-size: 10px;
+    }
+  }
+
+  .statusIcon {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+
+  .mailButton {
+    min-height: 60px;
+    min-width: 0;
+    padding: 8px;
+    border-radius: 9px;
+    font-size: 10px;
+  }
+
+  .mailIcon {
+    font-size: 13px;
+  }
+}
+
+/***** team information card *****/
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.teamInfoIconBox {
+  width: 61px;
+  height: 53px;
+  border-radius: 12px;
+  background: #d0e7f3;
+  color: #002771;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #90cce9;
+}
+
+.headerIcon {
+  font-size: 28px;
+  color: #0d5bd7;
+}
+
+.eventTitle {
+  margin: 0;
+  color: #003b95;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Information list */
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2d3a58;
+  word-break: break-word;
+
+  span,
+  a {
+    line-height: 1.4;
+  }
+
+  a {
+    color: #2d3a58;
+    text-decoration: none;
+
+    &:hover {
+      color: #0044b3;
+    }
+  }
+}
+
+/* Left side icons */
+.icon {
+  color: #0247aa;
+  font-size: 20px;
+  width: 22px;
+  min-width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button */
+.profileBtn {
+  border-radius: 20px !important;
+  border: 1px solid #0247aa !important;
+  color: #0247aa !important;
+  background: #fff !important;
+  padding: 10px 30px !important;
+  width: 100%;
+  font-weight: 600;
+  :hover {
+    background: #0247aa !important;
+    color: #fff !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .teamInfoIconBox {
+    width: 58px;
+    height: 58px;
+  }
+
+  .headerIcon {
+    font-size: 24px;
+  }
+
+  .eventTitle {
+    font-size: 20px;
+  }
+
+  .infoItem {
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .profileBtn {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .card {
+    padding: 18px;
+  }
+
+  .teamInfoIconBox {
+    width: 54px;
+    height: 54px;
+  }
+
+  .eventTitle {
+    font-size: 18px;
+  }
+
+  .infoList {
+    gap: 16px;
+  }
+
+  .profileBtn {
+    font-size: 14px;
+  }
+}
+
+.infoLabel {
+  color: #2d3a58;
+  line-height: 1.2;
+  margin-bottom: 5px;
+
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.infoValue {
+  color: #2d3a58;
+  font-weight: 500;
+  line-height: 1.2;
+
+  font-weight: 500;
+  font-size: 12px;
+}
+/***** End team information card *****/
+
+/***** Event & Stages Card *****/
+
+.accordion {
+  --bs-accordion-border-width: 0;
+  --bs-accordion-border-radius: 0;
+}
+
+.accordionItem {
+  border: 0 !important;
+  border-top: 1px solid #e8edf1 !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+/* ACCORDION HEADER */
+
+.accordionItem :global(.accordion-button) {
+  min-height: 38px;
+  padding: 8px 16px 8px 25px;
+  background: #f2f9fd;
+  color: #27385b;
+  font-size: 10px;
+  font-weight: 500;
+  box-shadow: none !important;
+}
+
+.accordionItem :global(.accordion-button:not(.collapsed)) {
+  background: #f2f9fd;
+  color: #27385b;
+  box-shadow: none !important;
+}
+
+.accordionItem :global(.accordion-button)::after {
+  width: 11px;
+  height: 11px;
+  margin-left: 10px;
+  background-size: 11px;
+}
+
+/* ACCORDION TITLE  */
+
+.accordionTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2d3a58;
+}
+
+/* STATUS BADGE  */
+
+.statusBadge {
+  min-width: 51px;
+  padding: 4px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.qualified {
+  color: #12b242;
+  background: #cdfedc;
+}
+
+.notQualified {
+  color: #ef5350;
+  background: #ffe3e3;
+}
+.resultsPending {
+  color: #e8b200;
+  background: #fdf3d5;
+}
+.registered {
+  color: #0054ad;
+  background: #009ee942;
+}
+.winner {
+  color: #fff;
+  background: #15ca4c;
+}
+.stageInProgress {
+  color: #0669f8;
+  background: #90cce929;
+}
+/* ACCORDION BODY */
+
+.accordionBody {
+  padding: 10px 16px 10px 37px;
+
+  background: #ffffff;
+}
+
+/* =====================================================
+   STAGE
+===================================================== */
+
+.stage {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.stage:last-child {
+  padding-bottom: 5px;
+}
+
+.stageTitle {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: #0247aa;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* =====================================================
+   STAGE CIRCLE
+===================================================== */
+
+.stageCircle {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1.5px solid #0247aa;
+  border-radius: 50%;
+}
+
+.stageCircle span {
+  width: 10px;
+  height: 10px;
+  background: #0247aa;
+  border-radius: 50%;
+}
+
+/* STAGE DETAILS BOX */
+
+.stageDetails {
+  position: relative;
+  margin-left: 7px;
+  min-height: 93px;
+  display: grid;
+  grid-template-columns:
+    1.3fr
+    1.25fr
+    1fr
+    0.65fr;
+  // align-items: center;
+
+  // padding: 8px 12px 8px 20px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-left: 4px solid #0247aa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.detailItem {
+  min-width: 0;
+  display: flex;
+  // align-items: flex-start;
+  // align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.detailItem:not(:last-child) {
+  border-right: 1px solid #eeeeee;
+}
+
+.detailIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #0247aa;
+  font-size: 18px;
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #15ca4c;
+  font-size: 18px;
+}
+
+/* =====================================================
+   DETAIL CONTENT
+===================================================== */
+
+.detailContent {
+  min-width: 0;
+}
+
+.detailLabel {
+  margin-bottom: 2px;
+  color: #2d3a58;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.detailValue {
+  color: #2d3a58;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/*  DOCUMENT */
+
+.document {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #27385b;
+  font-size: 12px;
+  text-decoration: underline;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.document:hover {
+  color: #0052b8;
+}
+
+.document :global(.bi-file-earmark-pdf) {
+  color: #ef5350;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+  .accordionItem :global(.accordion-button) {
+    padding: 8px 14px 8px 20px;
+  }
+
+  .accordionTitle {
+    font-size: 13px;
+  }
+
+  .statusBadge {
+    min-width: 48px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .accordionBody {
+    padding: 10px 14px 10px 30px;
+  }
+
+  .stage {
+    padding-bottom: 16px;
+  }
+
+  .stageTitle {
+    height: 36px;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .stageCircle {
+    width: 23px;
+    height: 23px;
+  }
+
+  .stageCircle span {
+    width: 9px;
+    height: 9px;
+  }
+
+  .stageDetails {
+    min-height: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 10px;
+  }
+
+  .detailItem {
+    padding: 8px 10px;
+  }
+
+  /* First column of each row */
+  .detailItem:nth-child(odd) {
+    border-right: 1px solid #eeeeee;
+  }
+
+  /* Second column of each row */
+  .detailItem:nth-child(even) {
+    border-right: 0;
+  }
+
+  /* Second row */
+  .detailItem:nth-child(n + 3) {
+    padding-top: 12px;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .detailIcon,
+  .statusIcon {
+    font-size: 17px;
+  }
+
+  .detailLabel {
+    font-size: 9px;
+  }
+
+  .detailValue,
+  .document {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .accordionItem :global(.accordion-button) {
+    min-height: 42px;
+    padding: 9px 10px 9px 15px;
+    font-size: 10px;
+  }
+
+  .accordionItem :global(.accordion-button)::after {
+    width: 10px;
+    height: 10px;
+    margin-left: 7px;
+    background-size: 10px;
+  }
+
+  .accordionTitle {
+    padding-right: 4px;
+    font-size: 11px;
+    min-width: 0;
+  }
+
+  .statusBadge {
+    min-width: auto;
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .accordionBody {
+    padding: 10px 10px 8px 20px;
+  }
+
+  /* -----------------------------------------------------
+     STAGE
+  ----------------------------------------------------- */
+
+  .stage {
+    padding-bottom: 14px;
+  }
+
+  .stage:last-child {
+    padding-bottom: 4px;
+  }
+
+  .stageTitle {
+    height: 34px;
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .stageCircle {
+    width: 22px;
+    height: 22px;
+    border-width: 1.5px;
+  }
+
+  .stageCircle span {
+    width: 9px;
+    height: 9px;
+  }
+
+  /* -----------------------------------------------------
+     STAGE DETAILS
+  ----------------------------------------------------- */
+
+  .stageDetails {
+    margin-left: 5px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 8px 10px;
+  }
+
+  /* -----------------------------------------------------
+     DETAIL ITEM
+  ----------------------------------------------------- */
+
+  .detailItem {
+    min-width: 0;
+    padding: 8px 0;
+    gap: 7px;
+    border-right: 0 !important;
+  }
+
+  .detailItem:not(:last-child) {
+    padding-bottom: 10px;
+    border-right: 0 !important;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  /* -----------------------------------------------------
+     ICONS
+  ----------------------------------------------------- */
+
+  .detailIcon,
+  .statusIcon {
+    margin-top: 1px;
+    font-size: 16px;
+  }
+
+  /* -----------------------------------------------------
+     CONTENT
+  ----------------------------------------------------- */
+
+  .detailLabel {
+    margin-bottom: 2px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .detailValue {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .document {
+    max-width: 100%;
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 375px) {
+  .accordionItem :global(.accordion-button) {
+    min-height: 40px;
+    padding: 8px 8px 8px 10px;
+  }
+
+  .accordionItem :global(.accordion-button)::after {
+    width: 9px;
+    height: 9px;
+    margin-left: 5px;
+    background-size: 9px;
+  }
+
+  .accordionTitle {
+    padding-right: 3px;
+    font-size: 10px;
+  }
+
+  .statusBadge {
+    padding: 4px 7px;
+    font-size: 7px;
+  }
+
+  .accordionBody {
+    padding: 8px 8px 7px 15px;
+  }
+
+  /* STAGE */
+
+  .stage {
+    padding-bottom: 12px;
+  }
+
+  .stageTitle {
+    height: 32px;
+
+    gap: 8px;
+
+    font-size: 10px;
+  }
+
+  .stageCircle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stageCircle span {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* DETAILS */
+
+  .stageDetails {
+    margin-left: 3px;
+
+    padding: 7px 9px;
+  }
+
+  .detailItem {
+    padding: 7px 0;
+
+    gap: 6px;
+  }
+
+  .detailItem:not(:last-child) {
+    padding-bottom: 9px;
+  }
+
+  .detailIcon,
+  .statusIcon {
+    font-size: 15px;
+  }
+
+  .detailLabel {
+    font-size: 7px;
+  }
+
+  .detailValue,
+  .document {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .accordionItem :global(.accordion-button) {
+    padding-left: 8px;
+    padding-right: 6px;
+  }
+
+  .accordionTitle {
+    font-size: 9px;
+  }
+
+  .statusBadge {
+    padding: 3px 6px;
+
+    font-size: 6.5px;
+  }
+
+  .accordionBody {
+    padding-left: 12px;
+    padding-right: 6px;
+  }
+
+  .stageTitle {
+    gap: 7px;
+
+    font-size: 9px;
+  }
+
+  .stageCircle {
+    width: 19px;
+    height: 19px;
+  }
+
+  .stageCircle span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .stageDetails {
+    margin-left: 2px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .detailIcon,
+  .statusIcon {
+    font-size: 14px;
+  }
+
+  .detailLabel {
+    font-size: 7px;
+  }
+
+  .detailValue,
+  .document {
+    font-size: 8px;
+  }
+}
+
+/***** End Event & Stages Card *****/
+
+/***** team members card *****/
+.teamMembers {
+  width: 100%;
+}
+
+.memberAvatar {
+  width: 25px;
+  height: 25px;
+  // border: 2px solid #0066c2;
+  // border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0054ad;
+  font-size: 25px;
+}
+
+.memberName {
+  color: #2d3a58;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.memberEmail {
+  color: #2d3a58;
+  line-height: 1.3;
+  margin-top: 2px;
+
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.teamLeadBadge {
+  background: #ffe07d;
+  color: #2d3a58;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  padding: 4px 12px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .memberName {
+    font-size: 11px;
+  }
+
+  .memberEmail {
+    font-size: 8px;
+  }
+
+  .teamLeadBadge {
+    padding: 3px 8px;
+    font-size: 7px;
+  }
+}
+/***** End team members card *****/
